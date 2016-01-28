@@ -1,0 +1,47 @@
+<ion-view view-title="La Pesata">
+  <ion-content class="padding">
+
+    <div class="list">
+      <label class="item item-input">
+        <span class="input-label">Peso (Kg)</span>
+        <input type="number" ng-model="peso">
+      </label>
+
+      <label class="item item-input">
+        <span class="input-label">Fat %</span>
+        <input type="number" ng-model="fat">
+      </label>
+
+      <label class="item item-input">
+        <span class="input-label">Water %</span>
+        <input type="number" ng-model="water">
+      </label>
+
+      <label class="item item-input">
+        <span class="input-label">Muscle %</span>
+        <input type="number" ng-model="muscle">
+      </label>
+
+      <label class="item item-input">
+        <span class="input-label">Bone %</span>
+        <input type="number" ng-model="bone">
+      </label>
+    </div>
+
+    <button class="button button-block button-positive"
+            ng-click="addItem(peso, fat, water, muscle, bone)">
+      Salva
+    </button>
+
+    <div class="card">
+        <div class="item item-divider">
+            Ultimi 30 giorni
+        </div>
+        <div class="item item-text-wrap">
+            <canvas id="line" class="chart chart-line" chart-data="data" chart-labels="labels" chart-legend="true" chart-series="series"></canvas>
+        </div>
+    </div>
+
+
+  </ion-content>
+</ion-view>
